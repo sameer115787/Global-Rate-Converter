@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    /* Attractive orange-pink gradient background */
+    background: linear-gradient(135deg, #ff9966 0%, #ff5e62 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#converter-card {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+    box-shadow: 0 8px 32px 0 rgba(161, 140, 209, 0.18);
+    border-radius: 1.5rem;
+    border: 2px solid #a18cd1;
+    padding: 2.5rem 2rem;
+    width: 100%;
+    max-width: 420px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+#converter-card:hover {
+    box-shadow: 0 12px 40px 0 #a18cd1, 0 2px 12px 0 #ff5e62;
+    transform: translateY(-2px) scale(1.01);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.02em;
+    text-shadow: 0 2px 8px #fbc2eb44;
+}
+
+header p {
+    color: #222;
+    font-size: 1rem;
+}
+
+.inputs>div {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+input[type="number"],
+select {
+    background: #f8fafc;
+    border: 2px solid #a18cd1;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    color: #111;
+    transition: border 0.2s, box-shadow 0.2s;
+    outline: none;
+    box-shadow: 0 1px 4px #a18cd133;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="number"]:focus,
+select:focus {
+    border-color: #a18cd1;
+    box-shadow: 0 2px 8px #a18cd133;
+}
+
+.custom-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23111'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z' clip-rule='evenodd' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+}
+
+.currency-row {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+#swap_button {
+    background: linear-gradient(135deg, #fbc2eb 0%, #a18cd1 100%);
+    color: #111;
+    border: none;
+    border-radius: 50%;
+    width: 2.8rem;
+    height: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 1px 4px #a18cd133;
+    transition: background 0.2s, color 0.2s, transform 0.1s;
+    cursor: pointer;
+}
+
+#swap_button:hover,
+#swap_button:focus {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+    color: #222;
+    transform: rotate(90deg) scale(1.08);
+}
+
+.swap-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+#convert_button {
+    background: linear-gradient(90deg, #a18cd1 0%, #fbc2eb 100%);
+    color: #111;
+    font-weight: 700;
+    border: none;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px #a18cd133;
+    transition: background 0.2s, transform 0.1s;
+    padding: 0.9rem 1.2rem;
+    font-size: 1.15rem;
+    width: 100%;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+}
+
+#convert_button:hover,
+#convert_button:focus {
+    background: linear-gradient(90deg, #fbc2eb 0%, #a18cd1 100%);
+    transform: scale(1.02);
+}
+
+#result_area {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #a18cd1;
+}
+
+#conversion_result p {
+    color: #111;
+    font-weight: 800;
+    font-size: 2rem;
+    letter-spacing: 0.01em;
+    min-height: 2.5rem;
+}
+
+#rate_display {
+    color: #222;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+#error_message {
+    color: #e11d48;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+#loading_indicator {
+    color: #a18cd1;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 1rem;
+}

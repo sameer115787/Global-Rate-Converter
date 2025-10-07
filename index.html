@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Inter font for better UI -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Main Converter Card -->
+    <div id="converter-card">
+        <header>
+            <h1>
+                Global Rate Converter
+            </h1>
+            <p>
+                Quickly check exchange rates. (Using Mock Data)
+            </p>
+        </header>
+
+        <!-- Input Section -->
+        <div class="inputs">
+            <!-- Amount Input -->
+            <div>
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" value="100" min="0" step="0.01" placeholder="Enter amount">
+            </div>
+
+            <!-- Currency Selection -->
+            <div class="currency-row">
+                <div>
+                    <label for="from_currency">From</label>
+                    <select id="from_currency" class="custom-select"></select>
+                </div>
+                <button id="swap_button" title="Swap Currencies">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="swap-icon" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                    </svg>
+                </button>
+                <div>
+                    <label for="to_currency">To</label>
+                    <select id="to_currency" class="custom-select"></select>
+                </div>
+            </div>
+
+            <!-- Convert Button -->
+            <button id="convert_button">
+                Convert
+            </button>
+        </div>
+
+        <!-- Result Display -->
+        <div id="result_area">
+            <div id="loading_indicator" class="hidden">
+                Calculating...
+            </div>
+            <div id="conversion_result">
+                <p>
+                    <!-- Result will appear here -->
+                </p>
+                <p id="rate_display">
+                    <!-- Current rate will appear here -->
+                </p>
+            </div>
+            <div id="error_message" class="hidden">
+                <!-- Error messages will appear here -->
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
